@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>roomalyzer module &mdash; Roomalyzer  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test module" href="test.html" />
+    <link rel="prev" title="Welcome to Roomalyzer’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Roomalyzer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">roomalyzer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#roomalyzer.Roomalyzer"><code class="docutils literal notranslate"><span class="pre">Roomalyzer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.add_chart"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.add_chart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.add_subplot_chart"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.add_subplot_chart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.calc_average_vals"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.calc_average_vals()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.check_humidity_levels"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.check_humidity_levels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.create_chart"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.create_chart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.data"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.data</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.date"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.dehum_log"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.dehum_log</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.dehumidifier_state_to_bool"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.dehumidifier_state_to_bool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.hum"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.hum</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.read_dehumidifier_log"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.read_dehumidifier_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.read_thingspeak"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.read_thingspeak()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.summary"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.summary</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roomalyzer.Roomalyzer.temp"><code class="docutils literal notranslate"><span class="pre">Roomalyzer.temp</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Roomalyzer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">roomalyzer module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/roomalyzer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-roomalyzer">
+<span id="roomalyzer-module"></span><h1>roomalyzer module<a class="headerlink" href="#module-roomalyzer" title="Link to this heading"></a></h1>
+<p>Roomalyzer is a Python module for visualizing conditions in your room.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roomalyzer.</span></span><span class="sig-name descname"><span class="pre">Roomalyzer</span></span><a class="headerlink" href="#roomalyzer.Roomalyzer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Roomalyzer class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.add_chart">
+<span class="sig-name descname"><span class="pre">add_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorbars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.add_chart" title="Link to this definition"></a></dt>
+<dd><p>Append chart to an existing figure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>figure</strong> (<em>go.Figure</em>) – Figure to append</p></li>
+<li><p><strong>y_data</strong> (<em>pd.Series</em>) – Data to put on Y axis</p></li>
+<li><p><strong>x_data</strong> (<em>pd.Series</em><em>, </em><em>optional</em>) – Data to put on X axis, by default None</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the chart, by default None</p></li>
+<li><p><strong>errorbars</strong> (<em>pd.Series</em><em>, </em><em>optional</em>) – Data to create error bars, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Figure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.add_subplot_chart">
+<span class="sig-name descname"><span class="pre">add_subplot_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Figure</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorbars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.add_subplot_chart" title="Link to this definition"></a></dt>
+<dd><p>Adds a subplot chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>figure</strong> (<em>go.Figure</em>) – Figure to attach to</p></li>
+<li><p><strong>y_data</strong> (<em>pd.Series</em>) – Data to put on Y axis</p></li>
+<li><p><strong>row</strong> (<em>int</em>) – Row in subplot grid</p></li>
+<li><p><strong>col</strong> (<em>int</em>) – Column in subplot grid</p></li>
+<li><p><strong>x_data</strong> (<em>pd.Series</em><em>, </em><em>optional</em>) – Data to put on X axis, by default date and time</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the chart, by default None</p></li>
+<li><p><strong>errorbars</strong> (<em>pd.Series</em><em>, </em><em>optional</em>) – Data to create error bars, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Figure</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.calc_average_vals">
+<span class="sig-name descname"><span class="pre">calc_average_vals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.calc_average_vals" title="Link to this definition"></a></dt>
+<dd><p>Calculates average values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frequency</strong> (<em>str</em>) – Can be day, month, week</p></li>
+<li><p><strong>offset</strong> (<em>str</em>) – Shift regarding chosen frequency</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dataframe with averaged values</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.check_humidity_levels">
+<span class="sig-name descname"><span class="pre">check_humidity_levels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.check_humidity_levels" title="Link to this definition"></a></dt>
+<dd><p>Checks if humidity levels are off limits, adds a new column</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.create_chart">
+<span class="sig-name descname"><span class="pre">create_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.create_chart" title="Link to this definition"></a></dt>
+<dd><p>Create an indepentend chart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_data</strong> (<em>pd.Series</em>) – Data to put on Y axis</p></li>
+<li><p><strong>x_data</strong> (<em>pd.Series</em><em>, </em><em>optional</em>) – Data to put on X axis, by default None</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the chart, by default None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Figure with chart</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#roomalyzer.Roomalyzer.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.date">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#roomalyzer.Roomalyzer.date" title="Link to this definition"></a></dt>
+<dd><p>Column name for data access</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Column name</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.dehum_log">
+<span class="sig-name descname"><span class="pre">dehum_log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#roomalyzer.Roomalyzer.dehum_log" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.dehumidifier_state_to_bool">
+<span class="sig-name descname"><span class="pre">dehumidifier_state_to_bool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.dehumidifier_state_to_bool" title="Link to this definition"></a></dt>
+<dd><p>Converts dehumidifier state from ‘on’ to 1 and ‘off’ to 0</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.hum">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hum</span></span><a class="headerlink" href="#roomalyzer.Roomalyzer.hum" title="Link to this definition"></a></dt>
+<dd><p>Column name for data access</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Column name</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.read_dehumidifier_log">
+<span class="sig-name descname"><span class="pre">read_dehumidifier_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">','</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.read_dehumidifier_log" title="Link to this definition"></a></dt>
+<dd><p>Reads file with dehumidifier on and off time, in csv format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>Path</em>) – Path to .csv file</p></li>
+<li><p><strong>sep</strong> (<em>str</em><em>, </em><em>optional</em>) – csv file separator, by default “,”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.read_thingspeak">
+<span class="sig-name descname"><span class="pre">read_thingspeak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roomalyzer.Roomalyzer.read_thingspeak" title="Link to this definition"></a></dt>
+<dd><p>Reads data from a ThingSpeak server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL to ThingSpeak server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.summary">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">summary</span></span><a class="headerlink" href="#roomalyzer.Roomalyzer.summary" title="Link to this definition"></a></dt>
+<dd><p>Data summary - global max, min, mean</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dataframe with calculated summary</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roomalyzer.Roomalyzer.temp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temp</span></span><a class="headerlink" href="#roomalyzer.Roomalyzer.temp" title="Link to this definition"></a></dt>
+<dd><p>Column name for data access</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Column name</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Roomalyzer’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="test.html" class="btn btn-neutral float-right" title="test module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jan Michalski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

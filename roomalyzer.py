@@ -16,9 +16,39 @@ class Roomalyzer:
     data = pd.DataFrame()
     dehum_log = pd.DataFrame()
 
-    temp = "temperature"
-    hum = "humidity"
-    date = "date"
+    @property
+    def temp(self):
+        """Column name for data access
+
+        Returns
+        -------
+        str
+            Column name
+        """
+        return "temperature"
+
+    @property
+    def hum(self):
+        """Column name for data access
+
+        Returns
+        -------
+        str
+            Column name
+        """
+        return "humidity"
+
+    @property
+    def date(self):
+        """Column name for data access
+
+        Returns
+        -------
+        str
+            Column name
+        """
+        return "date"
+
     __consts = {}
 
     def __init__(self):
@@ -27,7 +57,7 @@ class Roomalyzer:
 
     @property
     def summary(self):
-        """Data summary: global max, min, mean
+        """Data summary - global max, min, mean
 
         Returns
         -------
@@ -125,7 +155,12 @@ class Roomalyzer:
         )
 
     def check_humidity_levels(self):
-        """Checks if humidity levels are off limits, adds a new column"""
+        """Checks if humidity levels are off limits, adds a new column
+
+        Returns
+        -------
+        None
+        """
         df = self.data.copy()
 
         def conditions(val):
