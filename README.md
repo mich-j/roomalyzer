@@ -18,6 +18,8 @@ Panel kontrolny powinien wyświetlać się jako niezależne okno graficzne lub w
 
 ## Szczegóły techniczne
 
+Dokumentacja znajduje się [tutaj](docs/build/html/index.html). Wygenerowano ją przy pomocy narzędzia [Sphinx](https://www.sphinx-doc.org/en/master/), zastosowany motyw to popularny [Read The Docs](https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html).
+
 Projekt napisano w języku Python, wersja 3.11.6. Aplikacja działa we frameworku [Dash](https://dash.plotly.com/), który jest zintegrowany z biblioteką do wizualizacji [Plotly](https://plotly.com/python/) w wersji dla języka Python. Wizualizacja wyświetla się na lokalnym serwerze, tzw. _localhost_, na porcie (domyślnie) `8050`. Do przetwarzania danych służy [Pandas](https://pandas.pydata.org/).
 Komentarze w kodzie napisano w języku angielskim, jako że jest to powszechnie przyjęta konwencja. Formatowanie kodu wykonano programem [Black](https://github.com/psf/black). Interpreter ma utworzone środowisko wirtualne.
 
